@@ -1,5 +1,3 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable react-refresh/only-export-components */
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -44,7 +42,9 @@ const ExperienceCard = ({ experience }) => (
         <li
           key={`experience-point-${index}`}
           className="text-white-100 text-[14px] pl-1 tracking-wider"
-        >{point}</li>
+        >
+          {point}
+        </li>
       ))}
     </ul>
   </VerticalTimelineElement>
@@ -52,7 +52,7 @@ const ExperienceCard = ({ experience }) => (
 
 const Experience = () => {
   return (
-    <>
+    <SectionWrapper idName="experience">
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>What I have done so far</p>
         <h2 className={styles.sectionHeadText}>Work Experience.</h2>
@@ -65,8 +65,8 @@ const Experience = () => {
           ))}
         </VerticalTimeline>
       </div>
-    </>
+    </SectionWrapper>
   );
 };
 
-export default SectionWrapper(Experience, 'work');
+export default Experience;

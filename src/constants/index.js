@@ -1,20 +1,20 @@
 import {
-  mobile,
-  backend,
-  creator,
-  web,
+  // mobile,
+  // backend,
+  // creator,
+  // web,
   javascript,
   typescript,
   html,
   css,
   reactjs,
-  redux,
+  // redux,
   tailwind,
-  nodejs,
-  mongodb,
+  // nodejs,
+  // mongodb,
   git,
   figma,
-  docker,
+  // docker,
   meta,
   starbucks,
   tesla,
@@ -22,17 +22,25 @@ import {
   carrent,
   jobit,
   tripguide,
-  threejs,
+  // threejs,
 } from "../assets";
 
 export const navLinks = [
+  {
+    id: "home",
+    title: "Home",
+  },
   {
     id: "about",
     title: "About",
   },
   {
-    id: "work",
-    title: "Work",
+    id: "experience",
+    title: "Experience",
+  },
+  {
+    id: "project",
+    title: "Project",
   },
   {
     id: "contact",
@@ -41,22 +49,22 @@ export const navLinks = [
 ];
 
 const services = [
-  {
-    title: "Web Developer",
-    icon: web,
-  },
-  {
-    title: "React Native Developer",
-    icon: mobile,
-  },
-  {
-    title: "Backend Developer",
-    icon: backend,
-  },
-  {
-    title: "Content Creator",
-    icon: creator,
-  },
+  // {
+  //   title: "Web Developer",
+  //   icon: web,
+  // },
+  // {
+  //   title: "React Native Developer",
+  //   icon: mobile,
+  // },
+  // {
+  //   title: "Backend Developer",
+  //   icon: backend,
+  // },
+  // {
+  //   title: "Content Creator",
+  //   icon: creator,
+  // },
 ];
 
 const technologies = [
@@ -80,26 +88,26 @@ const technologies = [
     name: "React JS",
     icon: reactjs,
   },
-  {
-    name: "Redux Toolkit",
-    icon: redux,
-  },
+  // {
+  //   name: "Redux Toolkit",
+  //   icon: redux,
+  // },
   {
     name: "Tailwind CSS",
     icon: tailwind,
   },
-  {
-    name: "Node JS",
-    icon: nodejs,
-  },
-  {
-    name: "MongoDB",
-    icon: mongodb,
-  },
-  {
-    name: "Three JS",
-    icon: threejs,
-  },
+  // {
+  //   name: "Node JS",
+  //   icon: nodejs,
+  // },
+  // {
+  //   name: "MongoDB",
+  //   icon: mongodb,
+  // },
+  // {
+  //   name: "Three JS",
+  //   icon: threejs,
+  // },
   {
     name: "git",
     icon: git,
@@ -108,10 +116,10 @@ const technologies = [
     name: "figma",
     icon: figma,
   },
-  {
-    name: "docker",
-    icon: docker,
-  },
+  // {
+  //   name: "docker",
+  //   icon: docker,
+  // },
 ];
 
 const experiences = [

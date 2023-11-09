@@ -1,21 +1,45 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+// import { Link } from 'react-router-dom';
 
 import { styles } from '../styles';
 import { navLinks } from '../constants';
-import { logo, menu, close } from '../assets';
+// import { logo, menu, close } from '../assets';
+import { menu, close } from '../assets';
 
 const Navbar = () => {
   const [active, setActive] = useState('');
   const [toggle, setToggle] = useState(false);
+  const [showNavbar, setShowNavbar] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+
+      if (scrollY > 75) {
+        setShowNavbar(true);
+      } else {
+        setShowNavbar(true);
+      }
+    };
+
+    // Add the scroll event listener when the component mounts
+    window.addEventListener('scroll', handleScroll);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
     <div>
       <nav
-        className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-primary`}
+        className={`${styles.paddingX} w-full flex items-center pt-5 pb-8 fixed ${
+          showNavbar ? 'top-0' : 'top-[-80px]'
+        } z-20 ease-in-out duration-300 blur-navbar`}
       >
-        <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
-          <Link
+        <div className="w-full flex justify-center items-center max-w-7xl mx-auto">
+          {/* <Link
             to="/"
             className="flex items-center gap-2"
             onClick={() => {
@@ -27,8 +51,8 @@ const Navbar = () => {
             <p className="text-white text-[18px] font-bold cursor-pointer flex">
               Web &nbsp; <span className="sm:block hidden">Portfolio </span>
             </p>
-          </Link>
-          <ul className="list-none hidden sm:flex flex-row gap-10">
+          </Link> */}
+          <ul className="list-none hidden md:flex flex-row gap-20">
             {navLinks.map((link) => (
               <li
                 key={link.id}
@@ -42,7 +66,7 @@ const Navbar = () => {
             ))}
           </ul>
 
-          <div className="sm:hidden flex flex-1 justify-end items-center">
+          <div className="md:hidden flex flex-1 justify-end items-center">
             <img
               src={toggle ? close : menu}
               alt="menu"

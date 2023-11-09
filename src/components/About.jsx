@@ -1,4 +1,3 @@
-/* eslint-disable react-refresh/only-export-components */
 import { Tilt } from 'react-tilt';
 import { motion } from 'framer-motion';
 
@@ -6,6 +5,7 @@ import { styles } from '../styles';
 import { services } from '../constants';
 import { fadeIn, textVariant } from '../utils/motion';
 import { SectionWrapper } from '../hoc';
+import Tech from './Tech';
 
 // eslint-disable-next-line react/prop-types
 const ServiceCard = ({ index, title, icon }) => (
@@ -39,31 +39,33 @@ const ServiceCard = ({ index, title, icon }) => (
 
 const About = () => {
   return (
-    <>
+    <SectionWrapper idName="about">
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>Introduction</p>
-        <h2 className={styles.sectionHeadText}>Overview.</h2>
+        <h2 className={styles.sectionHeadText}>About Me</h2>
       </motion.div>
 
       <motion.p
         variants={fadeIn('', '', 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-        I&apos;m a skilled software developer with experience in Typescript and
-        Javascript, and expertise in frameworks like React, Node.js, and
-        Three.js. I&apos; a quick learner and collaborate closely with clients
-        to create efficient, scalable, and user-friendly solutions that solve
-        real-world problems. Let&apos;s work together to bring your ideas to
-        life!
+        I am a Front-end Developer with two years of experience in designing,
+        developing, and maintaining web applications. I have a solid
+        understanding of Semantic HTML, CSS, and Javascript. and have expertise
+        in popular frameworks such as React, Next, Vue, and Tailwind CSS.
+        Currently, I am expanding my skill set by delving into the realm of 3D
+        web development.
       </motion.p>
+
+      <Tech />
 
       <div className="mt-20 flex flex-wrap gap-10 ">
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}
       </div>
-    </>
+    </SectionWrapper>
   );
 };
 
-export default SectionWrapper(About, 'about');
+export default About;
