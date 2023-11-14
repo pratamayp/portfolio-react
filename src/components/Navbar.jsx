@@ -16,7 +16,7 @@ const Navbar = () => {
       const scrollY = window.scrollY;
 
       if (scrollY > 75) {
-        setShowNavbar(true);
+        setShowNavbar(false);
       } else {
         setShowNavbar(true);
       }
@@ -34,9 +34,11 @@ const Navbar = () => {
   return (
     <div>
       <nav
-        className={`${styles.paddingX} w-full flex items-center pt-5 pb-8 fixed ${
-          showNavbar ? 'top-0' : 'top-[-80px]'
-        } z-20 ease-in-out duration-300 blur-navbar`}
+        className={`${
+          styles.paddingX
+        } w-full flex items-center pt-5 pb-8 fixed ${
+          showNavbar ? 'top-0' : 'top-0 blur-navbar'
+        } z-20 ease-in-out duration-300`}
       >
         <div className="w-full flex justify-center items-center max-w-7xl mx-auto">
           {/* <Link

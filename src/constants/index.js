@@ -16,10 +16,13 @@ import {
   figma,
   labkom,
   osi,
-  carrent,
-  jobit,
-  tripguide,
+  // carrent,
+  // jobit,
+  // tripguide,
   // threejs,
+  upl,
+  scoolaa,
+  telkominfra
 } from "../assets";
 
 export const navLinks = [
@@ -190,67 +193,67 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Telkominfra Dashboard",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "green-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: carrent,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Job IT",
-    description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "restapi",
-        color: "green-text-gradient",
-      },
-      {
-        name: "scss",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: jobit,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "Telkominfra Dashboard is a monitoring tool designed to track and analyze the KPIs of BTS operations. Leveraging Next.js and Graphql technologies, this application provides real-time insights into the performance metrics of BTS systems, facilitating informed decision-making for network optimization and maintenance.",
     tags: [
       {
         name: "nextjs",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "graphql",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "chakraui",
+        color: "green-text-gradient",
+      },
+    ],
+    image: telkominfra,
+    source_code_link: "",
+  },
+  {
+    name: "Scoolaa.id",
+    description:
+      "Scoolaa.id is a web-based and mobile application that can help manage educational facilities. Services offered include attendance, tuition payment, pocket money, health reports, grade reports, class schedules, donations and many more. This system is built with Go, Vue js, and Flutter.",
+    tags: [
+      {
+        name: "vuejs",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "graphql",
         color: "pink-text-gradient",
       },
+      {
+        name: "bootstrap",
+        color: "blue-text-gradient",
+      },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: scoolaa,
+    source_code_link: "",
+  },
+  {
+    name: "UPL Tracko",
+    description:
+      "UPL Tracko is a sales tracking application tailored for PT UPL Indonesia. Leveraging Vue JS and Graphql technologies, this application enables seamless tracking of sales activities, offering comprehensive insights into PT UPL Indonesia's sales performance.",
+    tags: [
+      {
+        name: "vuejs",
+        color: "green-text-gradient",
+      },
+      {
+        name: "graphql",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "bootstrap",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: upl,
+    source_code_link: "",
   },
 ];
 

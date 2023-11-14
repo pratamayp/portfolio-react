@@ -31,6 +31,9 @@ import labkom from './company/labkom.png'
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import upl from "./project/upl.png"
+import scoolaa from "./project/scoolaa.png"
+import telkominfra from "./project/telkominfra.png"
 
 export {
   logo,
@@ -63,4 +66,7 @@ export {
   carrent,
   jobit,
   tripguide,
+  upl,
+  scoolaa,
+  telkominfra
 };
