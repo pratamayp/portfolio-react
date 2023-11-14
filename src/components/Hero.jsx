@@ -97,7 +97,7 @@ const Hero = () => {
             variants={fadeIn('', '', 0.1, 1)}
             className={`${styles.heroHeadText} text-white hero-title`}
           >
-            <AnimatedText text="Hi, I'm Maman Racing" duration={0.8} />
+            <AnimatedText text="Hi, I'm Yoga Pratama" duration={0.8} />
           </motion.h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
             {isRendered ? (
